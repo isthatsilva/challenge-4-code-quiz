@@ -25,6 +25,10 @@ button {
 
 .outer-container {
     padding: 10px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 }
 
 .top-bar p {
@@ -36,5 +40,5 @@ button {
 }
 
 .quiz-intro {
-    
+
 }
