@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+
+}
+
+body {
+    background-color: #222;
+    font-size: 13px;
+}
+
+P {
+    color: white;
+    font-size: 13px;
+}
+
+button {
+    border: none;
+    background: none;
+    color: lightskyblue;
+    cursor: pointer;
+}
+
+.outer-container {
+    padding: 10px;
+}
+
+.top-bar p {
+    float: right;
+}
+
+.inner-container {
+
+}
+
+.quiz-intro {
+    
+}
