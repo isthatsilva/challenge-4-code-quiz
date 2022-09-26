@@ -10,7 +10,7 @@
 <body>
     <div class="outer-container">
         <div class="top-bar">
-            <button id="veiw-high-scores">View Highscores</button>
+            <button class="btn-highscores"  id="veiw-high-scores">View Highscores</button>
             <p class="timer">Time: <span id="timer"></span></p>
         </div>
 
@@ -18,18 +18,13 @@
             <div class="quiz-intro">
                 <h1>Coding Quiz Challenge</h1>
                 <p>Click "Start Quiz" to see how much you know about JavaScript fundamentals. Good luck!</p>
-                <button class="btn start" id="start-quiz">Start Quiz</button>
+                <button class="btn-start" id="start-quiz">Start Quiz</button>
             </div>
             
             <main>
                 <div class="question-container">
                     <h2>Question Here</h2>
-                    <ul>
-                        <li><button>Answer 1</button></li>
-                        <li><button>Answer 2</button></li>
-                        <li><button>Answer 3</button></li>
-                        <li><button>Answer 4</button></li>
-                    </ul>
+                    <ul></ul>
                 </div>
 
                 <div class="finish-container">
@@ -45,14 +40,9 @@
 
                 <div class="highscores">
                     <h2>Highscores</h2>
-                    <ol>
-                        <li>DS - 100</li>
-                        <li>DS - 100</li>
-                        <li>DS - 100</li>
-                        <li>DS - 100</li>
-                    </ol>
-                    <button id="go-back">Go Back</button>
-                    <button id="clear-highscores">Clear Highscores</button>
+                    <ol></ol>
+                    <button class="btn" id="go-back">Go Back</button>
+                    <button class="btn" id="clear-highscores">Clear Highscores</button>
                 </div>
             </main>
         </div>
