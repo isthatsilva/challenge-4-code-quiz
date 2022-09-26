@@ -72,12 +72,16 @@ li {
     display: block;
 }
 
+main {
+    display: block;
+}
+
 .question-container {
-    display: none;
+    display: block;
 }
 
 .finish-container {
-    display: none;
+    display: block;
 }
 
 .highscores {
