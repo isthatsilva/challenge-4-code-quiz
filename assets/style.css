@@ -58,7 +58,7 @@ li {
     margin-bottom: 30vh;
     margin-left: 10%;
     margin-right: 10%;
-    display: block;
+    display: none;
     
 }
 
@@ -77,15 +77,15 @@ main {
 }
 
 .question-container {
-    display: block;
+    display: none;
 }
 
 .finish-container {
-    display: block;
+    display: none;
 }
 
 .highscores {
-    display: none;
+    display: block;
 }
 
 .highscores ol {
