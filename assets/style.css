@@ -17,8 +17,6 @@ P {
 }
 
 button {
-    border: none;
-    background: none;
     color: lightskyblue;
     cursor: pointer;
 }
@@ -42,6 +40,11 @@ li {
 
 .top-bar p {
     float: right;
+}
+
+.btn-highscores {
+    border: none;
+    background: none;
 }
 
 .inner-container {
@@ -98,3 +101,15 @@ main {
     overflow-y: scroll;
 }
 
+.btn {
+    border: none;
+    outline: none;
+    padding: 1px 5px;
+    background-color: lightskyblue;
+    color: black;
+}
+
+.btn:hover {
+    background-color: white;
+    color: lightskyblue;
+}
