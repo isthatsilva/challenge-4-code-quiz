@@ -8,45 +8,51 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <div class="outer-container">
-        <div class="top-bar">
-            <button class="btn-highscores"  id="veiw-high-scores">View Highscores</button>
-            <p class="timer">Time: <span id="timer"></span></p>
-        </div>
+    <header class="header-section">
+        <button class="btn-scores">View Highscores</button>
+        <div class="timer">Time: <span class="time-left">100</span></div>
+    </header>
+    
+    <div class="main-page">
+        <h1>Coding Quiz Challenge</h1>
+        <p>Click "Start Quiz" to see how much you know about JavaScript fundamentals. Time drops by 20 seconds for every incorrect answer choice. Good luck!</p>
+        <button class="btn-start">Start Quiz</button>
+    </div>
 
-        <div class="inner-container">
-            <div class="quiz-intro">
-                <h1>Coding Quiz Challenge</h1>
-                <p>Click "Start Quiz" to see how much you know about JavaScript fundamentals. Good luck!</p>
-                <button class="btn-start" id="start-quiz">Start Quiz</button>
-            </div>
-            
-            <main>
-                <div class="question-container">
-                    <h2>Question Here</h2>
-                    <ul></ul>
-                </div>
-
-                <div class="finish-container">
-                    <h2>All Done!</h2>
-                    <p>Your Score: 00</p>
-
-                    <div>
-                        <label for="">Enter Initals</label>
-                        <input type="text">
-                        <button>Enter</button>
-                    </div>
-                </div>
-
-                <div class="highscores">
-                    <h2>Highscores</h2>
-                    <ol></ol>
-                    <button class="btn" id="go-back">Go Back</button>
-                    <button class="btn" id="clear-highscores">Clear Highscores</button>
-                </div>
-            </main>
+    <div class="quiz-card">
+        <div class="quiz-question"><span>What is JavaScript abbreviated as?</span></div>
+        <div class="answer-list">
+            <ul class="list">
+                <li class="answer"><span>JVS</span></li>
+                <li class="answer"><span>JScript</span></li>
+                <li class="answer"><span>JS</span></li>
+                <li class="answer"><span>JavaS</span></li>
+            </ul>
         </div>
     </div>
+
+    <footer class="right-wrong">
+        <div class="right">Right!</div>
+        <div class="wrong">Wrong!</div>
+    </footer>
+
+    <div class="initials-page">
+        <h2>All Done!</h2>
+        <p>Your Score: <span class="your-score">00</span></p>
+        <div class="initials-box">
+            <label for="">Enter Initals</label>
+            <input type="text">
+            <button class="submit-btn">Submit</button>
+        </div>
+    </div>
+
+    <div class="score-results">
+        <h2>Highscores</h2>
+        <ol class="scores"></ol>
+        <button class="back-btn">Go Back</button>
+        <button class="clear-btn">Clear Highscores</button>
+    </div>
+
     <script src="assets/script.js"></script>
 </body>
 </html>
