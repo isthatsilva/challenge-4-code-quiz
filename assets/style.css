@@ -144,6 +144,19 @@ footer {
     margin-bottom: 10px;
 }
 
+.submit-btn {
+    background-color: lightskyblue;
+    color: black;
+    border: none;
+    outline: none;
+    padding: 1px 5px;
+}
+
+.submit-btn:hover {
+    background-color: white;
+    color: lightskyblue;
+}
+
 .score-results {
     text-align: center;
     margin: 0 auto;
@@ -168,14 +181,3 @@ footer {
     color: lightskyblue;
 }
 
-.submit-btn {
-    background-color: lightskyblue;
-    color: black;
-    border: none;
-    outline: none;
-    padding: 1px 5px;
-}
-
-.submit-btn:hover {
-    background-color: white;
-    color: lightskyblue;
