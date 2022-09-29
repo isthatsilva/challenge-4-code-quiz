@@ -9,48 +9,40 @@
 </head>
 <body>
     <header class="header-section">
-        <button class="btn-scores">View Highscores</button>
-        <div class="timer">Time: <span class="time-left">100</span></div>
+        <button class="btn-scores" id="btn-view-scores">View Highscores</button>
+        <div class="timer">Time: <span class="time-left" id="time-secs">100</span></div>
     </header>
     
-    <div class="main-page">
+    <div class="main-page" id="title-screen">
         <h1>Coding Quiz Challenge</h1>
         <p>Click "Start Quiz" to see how much you know about JavaScript fundamentals. Time drops by 20 seconds for every incorrect answer choice. Good luck!</p>
-        <button class="btn-start">Start Quiz</button>
+        <button class="btn-start" id="start-quiz">Start Quiz</button>
     </div>
 
-    <div class="quiz-card">
-        <div class="quiz-question"><span>What is JavaScript abbreviated as?</span></div>
-        <div class="answer-list">
-            <ul class="list">
-                <li class="answer"><span>JVS</span></li>
-                <li class="answer"><span>JScript</span></li>
-                <li class="answer"><span>JS</span></li>
-                <li class="answer"><span>JavaS</span></li>
-            </ul>
+    <div class="quiz-card" id="question-card">
+        <div class="quiz-question" id="question">
+            <div class="answer-list" id="answer-choices"></div>
         </div>
     </div>
 
-    <footer class="right-wrong">
-        <div class="right">Right!</div>
-        <div class="wrong">Wrong!</div>
-    </footer>
+    <div class="right" id="correct">Right!</div>
+    <div class="wrong" id="incorrect">Wrong!</div>
 
-    <div class="initials-page">
+    <div class="initials-page" id="initials-box">
         <h2>All Done!</h2>
-        <p>Your Score: <span class="your-score">00</span></p>
+        <p>Your Score: <span class="your-score" id="score"></span></p>
         <div class="initials-box">
-            <label for="">Enter Initals</label>
-            <input type="text">
-            <button class="submit-btn">Submit</button>
+            <p>Enter Initals in box below</p>
+            <input type="text" id="initials">
+            <button class="submit-btn" id="submit">Submit</button>
         </div>
     </div>
 
-    <div class="score-results">
+    <div class="score-results" id="score-page">
         <h2>Highscores</h2>
-        <ol class="scores"></ol>
-        <button class="back-btn">Go Back</button>
-        <button class="clear-btn">Clear Highscores</button>
+        <ol class="scores" id="score-list"></ol>
+        <button class="back-btn" id="back">Go Back</button>
+        <button class="clear-btn" id="clear">Clear Highscores</button>
     </div>
 
     <script src="assets/script.js"></script>

@@ -104,7 +104,8 @@ li {
     background-color: white;
 }
 
-footer {
+.right {
+    color: green;
     padding-top: 10px;
     height: 100%;
     width: 600px;
@@ -112,10 +113,6 @@ footer {
     margin: 0 auto;
     /* display: flex */
     display: none;
-}
-.right {
-    color: green;
-    display: flex;
 }
 
 .wrong {
@@ -126,7 +123,8 @@ footer {
     width: 600px;
     text-align: left;
     margin: 0 auto;
-    display: flex;
+    /* display: flex */
+    display: none;
 }
 
 .initials-page {
