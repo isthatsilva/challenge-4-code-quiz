@@ -23,26 +23,26 @@ li {
 .timer {
     float: right;
 }
-.time-left {
+.time_left {
     float: right;
 }
 
-.header-section {
+.header_section {
     padding: 10px;
     display: block;
     justify-content: start;
 }
 
-.btn-scores {
+.btn_scores {
     border: none;
     background: none;
     color: blue;
 }
-.btn-scores:hover {
+.btn_scores:hover {
     color: black;
 }
 
-.main-page {
+.main_page {
     text-align: center;
     margin: 0 auto;
     /* display: flex */
@@ -52,11 +52,11 @@ li {
     height: 100%;
     width: 50%;
 }
-.main-page p {
+.main_page p {
     margin-top: 10px;
 }
 
-.btn-start {
+.btn_start {
     margin: 20px auto;
     display: block;
     border: none;
@@ -66,12 +66,12 @@ li {
     color: black;
 }
 
-.btn-start:hover {
+.btn_start:hover {
     background-color: white;
     color: lightskyblue;
 }
 
-.quiz-card {
+.quiz_card {
     background-color: lightcyan;
     height: 100%;
     width: 600px;
@@ -83,13 +83,13 @@ li {
     justify-content: center;
 }
 
-.quiz-question {
+.quiz_question {
     padding-left: 25px;
     padding-top: 5px;
     font-size: 16px;
 }
 
-.answer-list {
+.answer_list {
     padding: 15px;
 }
 
@@ -127,7 +127,7 @@ li {
     display: none;
 }
 
-.initials-page {
+.initials_page {
     text-align: center;
     margin: 0 auto;
     /* display: none; */
@@ -137,12 +137,12 @@ li {
     width: 50%;
 }
 
-.initials-page p {
+.initials_page p {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.submit-btn {
+.submit_btn {
     background-color: lightskyblue;
     color: black;
     border: none;
@@ -150,12 +150,12 @@ li {
     padding: 1px 5px;
 }
 
-.submit-btn:hover {
+.submit_btn:hover {
     background-color: white;
     color: lightskyblue;
 }
 
-.score-results {
+.score_results {
     text-align: center;
     margin: 0 auto;
     /* display: block */
@@ -165,7 +165,7 @@ li {
     width: 50%;
 }
 
-.back-btn, .clear-btn {
+.back_btn, .clear_btn {
     margin: 20px auto;
     border: none;
     outline: none;
@@ -174,7 +174,7 @@ li {
     color: black;
 }
 
-.back-btn:hover, .clear-btn:hover {
+.back_btn:hover, .clear_btn:hover {
     background-color: white;
     color: lightskyblue;
 }
