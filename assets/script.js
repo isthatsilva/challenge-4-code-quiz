@@ -14,7 +14,7 @@ var clear_BtnEl = document.querySelector("#clear");
 
 
 var timerEl = document.querySelector("#time-secs");
-let timeSecond = 100;
+let timeSecond = 150;
 timerEl.innerHTML = timeSecond;
 
 const countDown = setInterval (()=> {
@@ -26,5 +26,5 @@ const countDown = setInterval (()=> {
     if(gameOver) {
         clearInterval(countDown);
     }
-},1000)
+}, 1000);
 
