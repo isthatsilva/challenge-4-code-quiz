@@ -8,52 +8,45 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <header class="header_section">
-        <button class="btn_scores" id="btn-view-scores">View Highscores</button>
-        <div class="timer">Time: <span id="time-secs"></span></div>
+    <header>
+        <a id="viewScores">View Highscores</a>
+        <div id="timer">Time: 15</div>
     </header>
-    
-    <div class="show" id="title-screen">
-        <div class="main_page">
-            <h1>Coding Quiz Challenge</h1>
-            <p>Click "Start Quiz" to see how much you know about JavaScript fundamentals. Time drops by 10 seconds for every incorrect answer choice. Good luck!</p>
-            <button class="btn_start" id="start-quiz">Start Quiz</button>
+
+    <div id="container" class="show">
+        <div id="title">
+            <h1>Code Quiz Challenge</h1>
+            <p>Click "Start Quiz" to see how much you know about JavaScript. Time drops by 5 seconds for every incorrect answer choice. Good luck!</p>
+            <button id="start">Start Quiz</button>
         </div>
     </div>
 
-    <div class="hide" id="question-card">
-        <div class="quiz_card">
-            <div class="quiz_question" id="question">
-                <div class="answer_list" id="answer-choices"></div>
+    <div id="container" class="hide">
+        <div id="quiz">
+            <div id="question"></div>
+            <div id="answers">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
             </div>
         </div>
     </div>
 
-    <div class="hide" id="correct">
-        <div class="right">Right!</div>
-    </div>
-    <div class="hide" id="incorrect">
-        <div class="wrong">Wrong!</div>
-    </div>
-    
-    <div class="hide" id="initials-box">
-        <div class="initials_page">
-            <h2>All Done!</h2>
-            <p>Your Score: <span class="your score" id="score"></span></p>
-            <div class="initials_box">
-                <p>Enter Initals in box below</p>
-                <input type="text" id="initials">
-                <button class="submit_btn" id="submit">Submit</button>
-            </div>
-        </div>
+    <div id="container" class="hide">
+        <form id="results">
+            <h2 id="score"></h2>
+            <label id="initials">Enter Initials</label>
+            <input type="text" id="type" placeholder="Enter initals"
+            <button id="submit">Submit</button>
+        </form>
     </div>
 
-    <div class="hide" id="score-page">
-        <div class="score_results">
+    <div id="container" class="hide">
+        <div id="highscores">
             <h2>Highscores</h2>
-            <ol class="scores" id="score-list"></ol>
-            <button class="back_btn" id="back">Go Back</button>
-            <button class="clear_btn" id="clear">Clear Highscores</button>
+            <button id="back">Go back</button>
+            <button id="clear">Clear Highscores</button>
         </div>
     </div>
 

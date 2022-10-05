@@ -5,44 +5,6 @@
     font-family: monospace;
 }
 
-body {
-    margin-bottom: 30vh;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-button {
-    cursor: pointer;
-}
-
-li {
-    list-style: none;
-    margin-top: 10px;
-}
-
-.timer {
-    float: right;
-}
-
-#time-secs {
-    float: right;
-}
-
-.header_section {
-    padding: 10px;
-    display: block;
-    justify-content: start;
-}
-
-.btn_scores {
-    border: none;
-    background: none;
-    color: blue;
-}
-.btn_scores:hover {
-    color: black;
-}
-
 .show {
     display: flex;
 }
@@ -51,135 +13,12 @@ li {
     display: none;
 }
 
-.main_page {
-    text-align: center;
-    margin: 0 auto;
-    display: flex;
-    /* display: none; */
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    width: 50%;
-}
-.main_page p {
-    margin-top: 10px;
-}
-
-.btn_start {
-    margin: 20px auto;
-    display: block;
-    border: none;
-    outline: none;
-    padding: 1px 5px;
-    background-color: lightskyblue;
-    color: black;
-}
-
-.btn_start:hover {
-    background-color: white;
-    color: lightskyblue;
-}
-
-.quiz_card {
-    background-color: lightcyan;
-    height: 100%;
-    width: 600px;
-    text-align: left;
-    margin: 0 auto;
-    /* display: flex */
+#container {
+    margin: 50px;
     flex-direction: column;
     justify-content: center;
 }
 
-.quiz_question {
-    padding-left: 25px;
-    padding-top: 5px;
-    font-size: 16px;
-}
-
-.answer_list {
-    padding: 15px;
-}
-
-.answer {
-    border: 1px solid black;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-}
-
-.answer:hover {
-    background-color: white;
-}
-
-.right {
-    color: green;
-    padding-top: 10px;
-    height: 100%;
-    width: 600px;
-    text-align: left;
-    margin: 0 auto;
-    /* display: flex */
-}
-
-.wrong {
-    color: red;
+#timer {
     float: right;
-    justify-content: start;
-    height: 100%;
-    width: 600px;
-    text-align: left;
-    margin: 0 auto;
-    /* display: flex */
 }
-
-.initials_page {
-    text-align: center;
-    margin: 0 auto;
-    /* display: block; */
-    justify-content: center;
-    height: 100%;
-    width: 50%;
-}
-
-.initials_page p {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.submit_btn {
-    background-color: lightskyblue;
-    color: black;
-    border: none;
-    outline: none;
-    padding: 1px 5px;
-}
-
-.submit_btn:hover {
-    background-color: white;
-    color: lightskyblue;
-}
-
-.score_results {
-    text-align: center;
-    margin: 0 auto;
-    /* display: block; */
-    justify-content: center;
-    height: 100%;
-    width: 50%;
-}
-
-.back_btn, .clear_btn {
-    margin: 20px auto;
-    border: none;
-    outline: none;
-    padding: 1px 5px;
-    background-color: lightskyblue;
-    color: black;
-}
-
-.back_btn:hover, .clear_btn:hover {
-    background-color: white;
-    color: lightskyblue;
-}
-

@@ -1,30 +1,78 @@
-var main_PageEl = document.getElementById("title-screen");
-var quiz_CardEl = document.getElementById("question-card");
-var quiz_QuestionEl = document.getElementById("question");
-var answer_ListEl = document.getElementById("answer-choices");
-var rightEl = document.getElementById("coreect");
-var wrongEl = document.getElementById("incorrect");
-var initials_PageEl = document.getElementById("initials-box");
-var score_ResultsEl = document.getElementById("score-page");
-var scoresEl = document.getElementById("core-list");
-var btn_ScoresEl = document.querySelector("#btn-view-scores");
-var btn_SartEl = document.querySelector("#start-quiz");
-var back_BtnEl = document.querySelector("#back");
-var clear_BtnEl = document.querySelector("#clear");
+var timerEl = document.getElementById("timer");
+var timeLeft = 15;
+var timerID;
+var titleEl = document.getElementById("title");
+var quizEl = document.getElementById("quiz");
+var questionEl = document.getElementById("question");
+var answersEl = document.getElementById("answers");
+var viewHighScores = document.getElementById("viewScores");
+var submitButton = document.getElementById("submit");
+var backButton = document.getElementById("back");
+var initialsForm = document.getElementById("initials");
+var clearScoreButton = document.getElementById("clear");
+var scoresField = document.getElementById("results");
+var startButton = document.getElementById("start");
+var scores = JSON.parse(localStorage.getItem("scores")) || [];
+var currentQuestion = 0;
 
+var container = ["title", "quiz", "results", "highscores"];
 
-var timerEl = document.querySelector("#time-secs");
-let timeSecond = 150;
-timerEl.innerHTML = timeSecond;
+startButton.addEventListener("click", startQuiz);
 
-const countDown = setInterval (()=> {
-    timeSecond--;
-    timerEl.innerHTML = timeSecond;
-    if(timeSecond <= 0 || timeSecond < 1) {
-        clearInterval(countDown);
+function timeSecond() {
+    timeLeft--;
+    timerEl.textContent = "Time: " + timeLeft;
+    if (timeLeft <= 0 || timeSecond < 1) {
+        clearInterval(timeLeft);
     }
-    if(gameOver) {
-        clearInterval(countDown);
-    }
-}, 1000);
+}
 
+var questions = [
+    {
+        question: "What is the abbreviation for JavaScript?",
+        answers: [
+            { text: "JavaS", correct: false },
+            { text: "JVS", correct: false },
+            { text: "JS", correct: true },
+            { text: "JScript", correct: false },
+        ]
+    },
+    {
+        question: "What is JavaScript used for?",
+        answers: [
+            { text: "To add styling", correct: false },
+            { text: "To create content", correct: false },
+            { text: "To add logic", correct: true },
+        ]
+    }
+];
+
+function startQuiz() {
+    timerID = setInterval(timeSecond, 1000);
+    titleEl.classList.add("hide");
+    currentQuestion = 0;
+    quizEl.classList.remove("hide");
+    
+    timeSecond();
+    setNextQuestion();
+    showQuestion();
+};
+
+function setNextQuestion() {
+    resetState();
+    showQuestion([currentQuestion]);
+};
+
+function showQuestion(question) {
+    questionEl.innerText = question.question
+    question.answers.forEach( answer => {
+        var button = document.createElement("button")
+        button.innertext = answer.text
+        button.classList.add("btn")
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener("click",selectAnswer)
+        answersEl.appendChild(button)
+    })
+};
