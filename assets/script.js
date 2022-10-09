@@ -10,8 +10,8 @@ var initialsForm = document.getElementById("initials");
 var clearScoreButton = document.getElementById("clear");
 var scoresField = document.getElementById("results");
 var startButton = document.getElementById("start");
-var questionEl = document.querySelector("question");
-var answersEl = document.querySelector("answers");
+var questionEl = document.querySelector("#question");
+var answersEl = document.querySelector("#answers");
 var currentQuestion = 0;
 var ulCreate = document.createElement("ul");
 
@@ -46,12 +46,16 @@ function startQuiz() {
     quizEl.classList.remove("hide");
     
     timeSecond();
+    questionCard();
 };
 
 function questionCard() {
+    var currQuestion = questions[currentQuestion];
+    questionEl.textContent = currQuestion.question;
+
     for (var i = 0; i < questions.length; i++) {
         var userQuestion = questions[currentQuestion].title;
         var userChoices = questions[currentQuestion].choices;
-        question.textContent = userQuestion;
+        questionEl.textContent = userQuestion;
     }
 }
