@@ -48,7 +48,7 @@ function startQuiz() {
     timeSecond();
 };
 
-function currentQuestion() {
+function questionCard() {
     for (var i = 0; i < questions.length; i++) {
         var userQuestion = questions[currentQuestion].title;
         var userChoices = questions[currentQuestion].choices;
