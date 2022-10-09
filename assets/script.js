@@ -3,8 +3,6 @@ var timeLeft = 15;
 var timerID;
 var titleEl = document.getElementById("title");
 var quizEl = document.getElementById("quiz");
-var questionEl = document.getElementById("question");
-var answersEl = document.getElementById("answers");
 var viewHighScores = document.getElementById("viewScores");
 var submitButton = document.getElementById("submit");
 var backButton = document.getElementById("back");
@@ -12,39 +10,33 @@ var initialsForm = document.getElementById("initials");
 var clearScoreButton = document.getElementById("clear");
 var scoresField = document.getElementById("results");
 var startButton = document.getElementById("start");
-var scores = JSON.parse(localStorage.getItem("scores")) || [];
+var questionEl = document.querySelector("question");
+var answersEl = document.querySelector("answers");
 var currentQuestion = 0;
-
-var container = ["title", "quiz", "results", "highscores"];
+var ulCreate = document.createElement("ul");
 
 startButton.addEventListener("click", startQuiz);
 
 function timeSecond() {
-    timeLeft--;
     timerEl.textContent = "Time: " + timeLeft;
-    if (timeLeft <= 0 || timeSecond < 1) {
-        clearInterval(timeLeft);
+    if (timeLeft <= 0) {
+        clearInterval(timer);
+    } else {
+        timeLeft--;
     }
 }
 
 var questions = [
     {
         question: "What is the abbreviation for JavaScript?",
-        answers: [
-            { text: "JavaS", correct: false },
-            { text: "JVS", correct: false },
-            { text: "JS", correct: true },
-            { text: "JScript", correct: false },
-        ]
+        choices: ["JavaS", "JVS", "JS", "JScript"],
+        answer: "JS"
     },
     {
         question: "What is JavaScript used for?",
-        answers: [
-            { text: "To add styling", correct: false },
-            { text: "To create content", correct: false },
-            { text: "To add logic", correct: true },
-        ]
-    }
+        choices: ["To add styling", "To create content", "To add logic"],
+        answer: "To add logic"
+    },
 ];
 
 function startQuiz() {
@@ -54,25 +46,12 @@ function startQuiz() {
     quizEl.classList.remove("hide");
     
     timeSecond();
-    setNextQuestion();
-    showQuestion();
 };
 
-function setNextQuestion() {
-    resetState();
-    showQuestion([currentQuestion]);
-};
-
-function showQuestion(question) {
-    questionEl.innerText = question.question
-    question.answers.forEach( answer => {
-        var button = document.createElement("button")
-        button.innertext = answer.text
-        button.classList.add("btn")
-        if (answer.correct) {
-            button.dataset.correct = answer.correct
-        }
-        button.addEventListener("click",selectAnswer)
-        answersEl.appendChild(button)
-    })
-};
+function currentQuestion() {
+    for (var i = 0; i < questions.length; i++) {
+        var userQuestion = questions[currentQuestion].title;
+        var userChoices = questions[currentQuestion].choices;
+        question.textContent = userQuestion;
+    }
+}
