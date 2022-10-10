@@ -53,9 +53,17 @@ function questionCard() {
     var currQuestion = questions[currentQuestion];
     questionEl.textContent = currQuestion.question;
 
-    for (var i = 0; i < questions.length; i++) {
-        var userQuestion = questions[currentQuestion].title;
-        var userChoices = questions[currentQuestion].choices;
-        questionEl.textContent = userQuestion;
-    }
+    // for (var i = 0; i < questions.length; i++) {
+    //     var userQuestion = questions[currentQuestion].title;
+    //     var userChoices = questions[currentQuestion].choices;
+    //     questionEl.textContent = userQuestion;
+    // }
+
+    answersEl.textContent = currQuestion.choices;
+    answersEl[currentQuestion].choices.forEach(function (answer, idx) {
+        var answerList = document.createElement("li");
+        answerList.textContent = currQuestion.choices;
+    })
 }
+
+
