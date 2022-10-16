@@ -60,10 +60,8 @@ function questionCard() {
     // }
 
     answersEl.textContent = currQuestion.choices;
-    answersEl[currentQuestion].choices.forEach(function (answer, idx) {
-        var answerList = document.createElement("li");
-        answerList.textContent = currQuestion.choices;
-    })
+    currQuestion.choices = document.createElement("li");
+    
 }
 
 
