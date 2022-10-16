@@ -59,14 +59,14 @@ function questionCard() {
     //     questionEl.textContent = userQuestion;
     // }
 
-    answersEl.textContent = currQuestion.choices;
-    currQuestion.choices = document.createElement("button");
+
     
-    for (var i = 0; i < currentQuestion.choices; i++) {
-        var choice = currentQuestion.choices[i];
-        var choiceNode = document.createElement("button");
-        choiceNode.setAttribute("class","");
+    for (var i = 0; i < currQuestion.choices.length; i++) {
+        var choice = currQuestion.choices[i];
+        var choiceNode = document.createElement("li");
+        choiceNode.textContent = choice;
+        answersEl.appendChild(choiceNode);
     }
-}
+};
 
 
