@@ -60,8 +60,13 @@ function questionCard() {
     // }
 
     answersEl.textContent = currQuestion.choices;
-    currQuestion.choices = document.createElement("li");
+    currQuestion.choices = document.createElement("button");
     
+    for (var i = 0; i < currentQuestion.choices; i++) {
+        var choice = currentQuestion.choices[i];
+        var choiceNode = document.createElement("button");
+        choiceNode.setAttribute("class","");
+    }
 }
 
 
