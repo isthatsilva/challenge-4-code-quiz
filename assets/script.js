@@ -64,7 +64,7 @@ function questionCard() {
     // }
 
 
-    
+    quizEl.innerHTML = "";
     for (var i = 0; i < currQuestion.choices.length; i++) {
         var choice = currQuestion.choices[i];
         var choiceNode = document.createElement("li");
@@ -84,8 +84,8 @@ function compare(event) {
         }
     }
     currentQuestion++
+    questionCard()
     if (questions.length > currentQuestion + 1) {
-        questionCard()
     } else {
         gameover = "true";
     }
