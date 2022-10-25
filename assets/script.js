@@ -14,6 +14,7 @@ var startButton = document.getElementById("start");
 var questionEl = document.querySelector("#question");
 var answersEl = document.querySelector("#answers");
 var currentQuestion = 0;
+var currQuestion;
 var ulCreate = document.createElement("ul");
 var score = 0;
 var gameover;
@@ -83,7 +84,7 @@ function compare(event) {
         }
     }
     currentQuestion++
-    if (currQuestion.length > currentQuestion + 1) {
+    if (questions.length > currentQuestion + 1) {
         questionCard()
     } else {
         gameover = "true";
