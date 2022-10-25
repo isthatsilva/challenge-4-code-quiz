@@ -1,5 +1,6 @@
 var timerEl = document.getElementById("timer");
 var timeLeft = 15;
+var penalty = 5;
 var timerID;
 var titleEl = document.getElementById("title");
 var quizEl = document.getElementById("quiz");
@@ -14,6 +15,8 @@ var questionEl = document.querySelector("#question");
 var answersEl = document.querySelector("#answers");
 var currentQuestion = 0;
 var ulCreate = document.createElement("ul");
+var score = 0;
+var gameover;
 
 startButton.addEventListener("click", startQuiz);
 
@@ -66,7 +69,25 @@ function questionCard() {
         var choiceNode = document.createElement("li");
         choiceNode.textContent = choice;
         answersEl.appendChild(choiceNode);
+        answersEl.addEventListener("click", (compare));
     }
 };
+
+function compare(event) {
+    var selectedAnswer = event.target;
+    if (selectedAnswer.matches("li")) {
+        if (selectedAnswer.textContent === questions[currentQuestion].answer) {
+            score = score + 50;
+        } else {
+            timeLeft = timeLeft - penalty;
+        }
+    }
+    currentQuestion++
+    if (currQuestion.length > currentQuestion + 1) {
+        questionCard()
+    } else {
+        gameover = "true";
+    }
+}
 
 
