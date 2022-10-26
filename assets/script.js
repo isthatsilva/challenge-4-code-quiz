@@ -60,12 +60,6 @@ function questionCard() {
     answersEl.innerHTML = "";
     questionEl.textContent = currQuestion.question;
 
-    // for (var i = 0; i < questions.length; i++) {
-    //     var userQuestion = questions[currentQuestion].title;
-    //     var userChoices = questions[currentQuestion].choices;
-    //     questionEl.textContent = userQuestion;
-    // }
-
 
     for (var i = 0; i < currQuestion.choices.length; i++) {
         var choice = currQuestion.choices[i];
@@ -81,17 +75,17 @@ function compare(event) {
     if (selectedAnswer.matches("li")) {
         if (selectedAnswer.textContent === questions[currentQuestion].answer) {
             score = score + 50;
+            currentQuestion++
         } else {
             timeLeft = timeLeft - penalty;
         }
     }
-    currentQuestion++
-    questionCard()
-    if (questions.length > currentQuestion + 1) {
-    } else {
+    if (currentQuestion >= questions.length ) {
         gameover = "true";
+        showScore();
+    } else {
+        questionCard();
     }
-    showScore();
 }
 
 function showScore() {
