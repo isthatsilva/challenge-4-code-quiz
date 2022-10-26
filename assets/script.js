@@ -9,7 +9,8 @@ var submitButton = document.getElementById("submit");
 var backButton = document.getElementById("back");
 var initialsForm = document.getElementById("initials");
 var clearScoreButton = document.getElementById("clear");
-var scoresField = document.getElementById("results");
+var scoreResults = document.getElementById("results");
+var scoreEl = document.getElementById("score");
 var startButton = document.getElementById("start");
 var questionEl = document.querySelector("#question");
 var answersEl = document.querySelector("#answers");
@@ -90,6 +91,15 @@ function compare(event) {
     } else {
         gameover = "true";
     }
+    showQuiz();
 }
 
+function showQuiz() {
+    quizEl.classList.add("hide");
+    scoreResults.classList.remove("hide");
+    scoreResults.classList.add("show");
 
+    var scoreDisplay = document.createElement("p");
+    scoreEl.innerText = ("You scored " + score + "!");
+    scoreEl.appendChild(scoreDisplay);
+}
