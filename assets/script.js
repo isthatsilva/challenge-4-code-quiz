@@ -55,6 +55,8 @@ function startQuiz() {
 
 function questionCard() {
     var currQuestion = questions[currentQuestion];
+    questionEl.innerHTML = "";
+    answersEl.innerHTML = "";
     questionEl.textContent = currQuestion.question;
 
     // for (var i = 0; i < questions.length; i++) {
@@ -64,7 +66,6 @@ function questionCard() {
     // }
 
 
-    quizEl.innerHTML = "";
     for (var i = 0; i < currQuestion.choices.length; i++) {
         var choice = currQuestion.choices[i];
         var choiceNode = document.createElement("li");
