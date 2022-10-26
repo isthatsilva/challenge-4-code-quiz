@@ -91,10 +91,10 @@ function compare(event) {
     } else {
         gameover = "true";
     }
-    showQuiz();
+    showScore();
 }
 
-function showQuiz() {
+function showScore() {
     quizEl.classList.add("hide");
     scoreResults.classList.remove("hide");
     scoreResults.classList.add("show");
