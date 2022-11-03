@@ -31,9 +31,9 @@
     <div id="container">
         <div id="results" class="hide">
             <h2 id="score"></h2>
-            <form id="initialsForm">
+            <form id="initials-form">
                 <p> Enter Initials:
-                    <input type="text" id="type" placeholder="Initals">
+                    <input type="text" id="initials" placeholder="Initials">
                     <button id="submit">Submit</button>
                 </p>
             </form>
@@ -42,7 +42,9 @@
 
     <div id="container">
         <div id="highscores" class="hide">
-            <h2>Highscores</h2>
+            <h2>Highscores
+                <ol id="all-scores"></ol>
+            </h2>
             <button id="back">Go back</button>
             <button id="clear">Clear Highscores</button>
         </div>

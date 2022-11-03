@@ -7,13 +7,14 @@ var quizEl = document.getElementById("quiz");
 var viewHighScores = document.getElementById("viewScores");
 var submitButton = document.getElementById("submit");
 var backButton = document.getElementById("back");
-var initialsForm = document.getElementById("initials");
+var highscoresEl = document.getElementById("highscores");
 var clearScoreButton = document.getElementById("clear");
 var scoreResults = document.getElementById("results");
 var scoreEl = document.getElementById("score");
 var startButton = document.getElementById("start");
 var questionEl = document.querySelector("#question");
 var answersEl = document.querySelector("#answers");
+var initials = document.querySelector("#initials");
 var currentQuestion = 0;
 var currQuestion;
 var ulCreate = document.createElement("ul");
@@ -83,6 +84,7 @@ function compare(event) {
     if (currentQuestion >= questions.length ) {
         gameover = "true";
         showScore();
+        timeLeft = 0
     } else {
         questionCard();
     }
@@ -96,4 +98,15 @@ function showScore() {
     var scoreDisplay = document.createElement("p");
     scoreEl.innerText = ("You scored " + score + "!");
     scoreEl.appendChild(scoreDisplay);
+}
+
+
+submitButton.addEventListener("click", highscoreDisplay);
+
+function highscoreDisplay() {
+    scoreResults.classList.add("hide");
+    highscoresEl.classList.remove("hide");
+    highscoresEl.classList.add("show");
+
+    var allScores = document.getElementById("all-scores");
 }
