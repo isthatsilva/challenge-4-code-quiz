@@ -14,7 +14,7 @@ var scoreEl = document.getElementById("score");
 var startButton = document.getElementById("start");
 var questionEl = document.querySelector("#question");
 var answersEl = document.querySelector("#answers");
-var initials = document.querySelector("#initials");
+// var initials = document.querySelector("#initials");
 var currentQuestion = 0;
 var currQuestion;
 var ulCreate = document.createElement("ul");
@@ -100,10 +100,10 @@ function showScore() {
     scoreEl.appendChild(scoreDisplay);
 }
 
-
 submitButton.addEventListener("click", highscoreDisplay);
 
-function highscoreDisplay() {
+function highscoreDisplay(event) {
+    event.preventDefault();
     scoreResults.classList.add("hide");
     highscoresEl.classList.remove("hide");
     highscoresEl.classList.add("show");
