@@ -14,7 +14,7 @@ var scoreEl = document.getElementById("score");
 var startButton = document.getElementById("start");
 var questionEl = document.querySelector("#question");
 var answersEl = document.querySelector("#answers");
-// var initials = document.querySelector("#initials");
+var initialsForm = document.querySelector("#initials-form");
 var currentQuestion = 0;
 var currQuestion;
 var ulCreate = document.createElement("ul");
@@ -108,5 +108,15 @@ function highscoreDisplay(event) {
     highscoresEl.classList.remove("hide");
     highscoresEl.classList.add("show");
 
-    var allScores = document.getElementById("all-scores");
+    var initials= createInput.value;
+    if (initials === null) {
+        console.log("Initials not entered");
+    } else {
+        var allScore = {
+        initials: initials,
+        score: score
+    }
+    console.log(allScore);
+    }
+
 }
