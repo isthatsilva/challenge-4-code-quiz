@@ -8,13 +8,14 @@ var viewHighScores = document.getElementById("viewScores");
 var submitButton = document.getElementById("submit");
 var backButton = document.getElementById("back");
 var highscoresEl = document.getElementById("highscores");
+var scoreList = document.getElementById("all-scores");
 var clearScoreButton = document.getElementById("clear");
 var scoreResults = document.getElementById("results");
 var scoreEl = document.getElementById("score");
 var startButton = document.getElementById("start");
 var questionEl = document.querySelector("#question");
 var answersEl = document.querySelector("#answers");
-var initialsForm = document.querySelector("#initials-form");
+var initialsEl = document.querySelector("#initials");
 var currentQuestion = 0;
 var currQuestion;
 var ulCreate = document.createElement("ul");
@@ -108,15 +109,34 @@ function highscoreDisplay(event) {
     highscoresEl.classList.remove("hide");
     highscoresEl.classList.add("show");
 
-    var initials= createInput.value;
-    if (initials === null) {
+    var initials = initialsEl.value;
+    if (!initials) {
         console.log("Initials not entered");
     } else {
         var allScore = {
-        initials: initials,
-        score: score
-    }
-    console.log(allScore);
+            initials: initials,
+            score: score
+        }
+        console.log(allScore);
+        // scoreList.textContent = allScore;
+
+        var everyHighscore = localStorage.getItem("everyHighscore");
+        if (!everyHighscore) {
+            everyHighscore = [];
+        } else {
+            if (everyHighscore !== null){
+                for (var i = 0; i < everyHighscore.length; i++) {
+                    var createLi = document.createElement("li");
+                    createLi.textContent = everyHighscore[i].initials + " " + everyHighscore[i].score;
+                    scoreList.appendChild(createLi);
+                }
+            } else {
+                everyHighscore = JSON.parse(everyHighscore);
+            };
+        }
+        everyHighscore.push(allScore);
+        var newScore = JSON.stringify(everyHighscore);
+        localStorage.setItem("everyHighscore", newScore);
     }
 
 }
