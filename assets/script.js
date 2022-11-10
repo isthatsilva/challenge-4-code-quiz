@@ -80,6 +80,7 @@ function compare(event) {
             currentQuestion++
         } else {
             timeLeft = timeLeft - penalty;
+            currentQuestion++
         }
     }
     if (currentQuestion >= questions.length ) {
@@ -129,14 +130,15 @@ function highscoreDisplay(event) {
                     var createLi = document.createElement("li");
                     createLi.textContent = everyHighscore[i].initials + " " + everyHighscore[i].score;
                     scoreList.appendChild(createLi);
+
+                    everyHighscore = JSON.parse(everyHighscore);
+                    everyHighscore.push(allScore);
+                    var newScore = JSON.stringify(everyHighscore);
+                    localStorage.setItem("everyHighscore", newScore);
                 }
-            } else {
-                everyHighscore = JSON.parse(everyHighscore);
-            };
+            }
         }
-        everyHighscore.push(allScore);
-        var newScore = JSON.stringify(everyHighscore);
-        localStorage.setItem("everyHighscore", newScore);
+
     }
 
 }
