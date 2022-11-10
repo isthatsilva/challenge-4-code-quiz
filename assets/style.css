@@ -17,6 +17,10 @@ h1, h2, p {
     text-align: center;
 }
 
+ul, button {
+    cursor: pointer;
+}
+
 #container {
     margin-top: 30px;
     margin-left: 30%;
@@ -25,5 +29,7 @@ h1, h2, p {
 }
 
 #timer {
-    float: right;
+    position: absolute;
+    top: 10px;
+    right: 16px;
 }
