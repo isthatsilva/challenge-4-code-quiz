@@ -119,7 +119,6 @@ function highscoreDisplay(event) {
             score: score
         }
         console.log(allScore);
-        // scoreList.textContent = allScore;
 
         var everyHighscore = localStorage.getItem("everyHighscore");
         if (!everyHighscore) {
@@ -131,14 +130,25 @@ function highscoreDisplay(event) {
                     createLi.textContent = everyHighscore[i].initials + " " + everyHighscore[i].score;
                     scoreList.appendChild(createLi);
 
-                    everyHighscore = JSON.parse(everyHighscore);
-                    everyHighscore.push(allScore);
-                    var newScore = JSON.stringify(everyHighscore);
-                    localStorage.setItem("everyHighscore", newScore);
+                    // everyHighscore = JSON.parse(everyHighscore);
+                    // everyHighscore.push(allScore);
+                    // var newScore = JSON.stringify(everyHighscore);
+                    // localStorage.setItem("everyHighscore", newScore);
                 }
             }
+            everyHighscore = JSON.parse(everyHighscore);
         }
-
+        everyHighscore.push(allScore);
+        var newScore = JSON.stringify(everyHighscore);
+        localStorage.setItem("everyHighscore", newScore);
     }
-
 }
+
+clearButton.addEventListener("click", function () {
+    localStorage.clear();
+    location.reload();
+});
+
+backButton.addEventListener("click", function () {
+    window.location.replace("./index.html");
+});
