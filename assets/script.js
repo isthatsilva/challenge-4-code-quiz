@@ -130,13 +130,9 @@ function highscoreDisplay(event) {
                     createLi.textContent = everyHighscore[i].initials + " " + everyHighscore[i].score;
                     scoreList.appendChild(createLi);
 
-                    // everyHighscore = JSON.parse(everyHighscore);
-                    // everyHighscore.push(allScore);
-                    // var newScore = JSON.stringify(everyHighscore);
-                    // localStorage.setItem("everyHighscore", newScore);
+                    everyHighscore = JSON.parse(everyHighscore);
                 }
             }
-            everyHighscore = JSON.parse(everyHighscore);
         }
         everyHighscore.push(allScore);
         var newScore = JSON.stringify(everyHighscore);
