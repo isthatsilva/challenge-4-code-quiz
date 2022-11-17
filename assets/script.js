@@ -124,13 +124,13 @@ function highscoreDisplay(event) {
         if (!everyHighscore) {
             everyHighscore = [];
         } else {
+            everyHighscore = JSON.parse(everyHighscore);
             if (everyHighscore !== null){
                 for (var i = 0; i < everyHighscore.length; i++) {
                     var createLi = document.createElement("li");
                     createLi.textContent = everyHighscore[i].initials + " " + everyHighscore[i].score;
                     scoreList.appendChild(createLi);
 
-                    everyHighscore = JSON.parse(everyHighscore);
                 }
             }
         }
